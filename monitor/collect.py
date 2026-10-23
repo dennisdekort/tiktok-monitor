@@ -11,14 +11,14 @@ YTDLP = shutil.which('yt-dlp') or 'yt-dlp'
 def fetch(handle, limit, kanaal_id=None):
     url = f'tiktokuser:{kanaal_id}' if kanaal_id else f'https://www.tiktok.com/@{handle}'
     err = ''
-    for attempt in range(3):
+    for attempt in range(2):
         p = subprocess.run([YTDLP, '--flat-playlist', '--dump-json', '--playlist-end', str(limit), url],
-                           capture_output=True, text=True, timeout=300)
+                           capture_output=True, text=True, timeout=90)
         rows = [json.loads(l) for l in p.stdout.splitlines() if l.strip().startswith('{')]
         if rows:
             return rows, ''
         err = (p.stderr.strip().splitlines() or ['geen uitvoer'])[-1][:300]
-        time.sleep(20 * (attempt + 1))
+        time.sleep(10)
     return [], err
 
 
@@ -41,7 +41,7 @@ def main():
                                         'saves': r.get('save_count')}, ensure_ascii=False) + '\n')
                 runs.append({'fetched': now, 'account': handle, 'ok': int(bool(rows)), 'n': len(rows), 'err': err})
                 print(f'{handle}: {len(rows)} video\'s' + (f' (fout: {err})' if err else ''))
-                time.sleep(5)
+                time.sleep(3)
     with open(ROOT / 'data' / 'runs.jsonl', 'a', encoding='utf-8') as f:
         for r in runs:
             f.write(json.dumps(r, ensure_ascii=False) + '\n')
