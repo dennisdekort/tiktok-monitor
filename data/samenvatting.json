@@ -1,5 +1,5 @@
 {
- "gemaakt": "2026-10-23 10:11",
+ "gemaakt": "2026-10-23 10:18",
  "mediaan_views_per_account": {
   "dennis.dekort": 560.0,
   "kayaguness": 2491.0,
@@ -208,7 +208,7 @@
    {
     "url": "https://www.tiktok.com/@dennis.dekort/video/7690236553246919968",
     "desc": "#ecommerce #larp #claudecode #claude #openai ",
-    "leeftijd": 25.4,
+    "leeftijd": 25.5,
     "duur": 12,
     "views": 820,
     "x": 1.46,
@@ -288,7 +288,7 @@
    {
     "url": "https://www.tiktok.com/@dennis.dekort/video/7687639533340445984",
     "desc": "Feedback voor praatvideos altijd welkom #fyp #trending #ecommerce #achievers #business ",
-    "leeftijd": 32.4,
+    "leeftijd": 32.5,
     "duur": 64,
     "views": 545,
     "x": 0.97,
@@ -1273,5 +1273,21 @@
    "fout": "",
    "wanneer": "2026-10-22 14:00"
   }
- ]
+ ],
+ "trend": {
+  "dennis.dekort": [
+   {
+    "dag": "2026-10-22",
+    "views": 37179,
+    "nieuw": 0
+   }
+  ],
+  "kayaguness": [
+   {
+    "dag": "2026-10-22",
+    "views": 205554,
+    "nieuw": 0
+   }
+  ]
+ }
 }

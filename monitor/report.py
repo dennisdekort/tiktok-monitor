@@ -141,7 +141,10 @@ def main():
         sales = [r for r in csv.DictReader(sp.open(encoding='utf-8')) if r.get('datum')]
 
     runs = con.execute('SELECT account, ok, n, err, MAX(fetched) FROM runs GROUP BY account').fetchall()
+    trend = dagtrend(con, list(accounts['eigen']))
+    laatste = con.execute('SELECT MAX(fetched) FROM snaps').fetchone()[0] or now
     con.close()
+    schrijf_export(per_acc)
 
     samenvatting = {
         'gemaakt': time.strftime('%Y-%m-%d %H:%M'),
@@ -160,7 +163,19 @@ def main():
                                   'wanneer': time.strftime('%Y-%m-%d %H:%M', time.localtime(r[4]))} for r in runs],
     }
     (ROOT / 'data' / 'samenvatting.json').write_text(json.dumps(samenvatting, ensure_ascii=False, indent=1), encoding='utf-8')
-    (ROOT / 'index.html').write_text(dashboard(samenvatting, eigen, radar, mediaan, labels, werkt, veranderd), encoding='utf-8')
+    samenvatting['trend'] = trend
+    (ROOT / 'data' / 'samenvatting.json').write_text(json.dumps(samenvatting, ensure_ascii=False, indent=1), encoding='utf-8')
+    dag = time.strftime('%Y-%m-%d', time.gmtime(laatste))
+    noot_p = ROOT / 'data' / 'notitie.md'
+    if noot_p.exists():
+        (ROOT / 'data' / 'notities').mkdir(exist_ok=True)
+        (ROOT / 'data' / 'notities' / f'{dag}.md').write_text(noot_p.read_text(encoding='utf-8'), encoding='utf-8')
+    (ROOT / 'dagen').mkdir(exist_ok=True)
+    weken = schrijf_weken()
+    args = (samenvatting, eigen, radar, mediaan, labels, werkt, veranderd)
+    (ROOT / 'dagen' / f'{dag}.html').write_text(dashboard(*args, trend=trend, dag=dag, prefix='../', weken=weken), encoding='utf-8')
+    (ROOT / 'index.html').write_text(dashboard(*args, trend=trend, dag=dag, prefix='', weken=weken), encoding='utf-8')
+    schrijf_archief(trend, labels)
     print('index.html en data/samenvatting.json bijgewerkt')
 
 
@@ -175,8 +190,156 @@ def notities():
         if r.startswith('#'):
             kop = r.lstrip('# ').strip().lower()
         elif r:
-            out.setdefault(kop, []).append(r.lstrip('-* ').strip())
+            out.setdefault(kop, []).append(re.sub(r'^[-*]\s+', '', r).strip())
     return out
+
+
+def md_inline(t):
+    t = html.escape(t)
+    return re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', t)
+
+
+def dagtrend(con, eigen_accounts):
+    """Per account per dag (UTC): totalen van de laatste meting die dag, en wat erbij kwam t.o.v. de vorige dag."""
+    out = {}
+    for acc in eigen_accounts:
+        rows = con.execute('''SELECT s.fetched, SUM(s.views), SUM(s.likes), SUM(s.comments), SUM(s.shares), SUM(s.saves)
+                              FROM snaps s JOIN videos v ON v.id = s.id WHERE v.account = ? GROUP BY s.fetched ORDER BY s.fetched''', (acc,)).fetchall()
+        perdag = {}
+        for f, *tot in rows:
+            perdag[time.strftime('%Y-%m-%d', time.gmtime(f))] = [x or 0 for x in tot]
+        nieuw = defaultdict(int)
+        for (p,) in con.execute('SELECT posted FROM videos WHERE account = ? AND posted IS NOT NULL', (acc,)):
+            nieuw[time.strftime('%Y-%m-%d', time.gmtime(p))] += 1
+        dagen, vorige = [], None
+        for d in sorted(perdag):
+            t = perdag[d]
+            rij = {'dag': d, 'views': t[0], 'nieuw': nieuw.get(d, 0)}
+            if vorige:
+                for i, k in enumerate(['views', 'likes', 'reacties', 'shares', 'saves']):
+                    rij['erbij_' + k] = t[i] - vorige[i]
+            dagen.append(rij)
+            vorige = t
+        out[acc] = dagen[-30:]
+    return out
+
+
+def trend_html(dagen):
+    met = [d for d in dagen if 'erbij_views' in d]
+    if not met:
+        return '<h3>Trend</h3><p class="sub">Vanaf de tweede meetdag zie je hier per dag wat erbij kwam.</p>'
+    laatste = met[-14:]
+    top = max([d['erbij_views'] for d in laatste] + [1])
+    rows = ''.join(
+        f'<tr><td>{d["dag"][8:10]}-{d["dag"][5:7]}</td>'
+        f'<td class="n">+{fmt(d["erbij_views"])}</td><td><div class="bar" style="width:{max(2, round(100 * max(d["erbij_views"], 0) / top))}%"></div></td>'
+        f'<td class="n">+{fmt(d["erbij_likes"])}</td><td class="n">+{fmt(d["erbij_saves"])}</td><td class="n">+{fmt(d["erbij_reacties"])}</td>'
+        f'<td class="n">{d["nieuw"] or ""}</td></tr>'
+        for d in reversed(laatste))
+    w1 = sum(d['erbij_views'] for d in met[-7:])
+    w0 = sum(d['erbij_views'] for d in met[-14:-7])
+    vergelijk = (f'Laatste 7 meetdagen +{fmt(w1)} views'
+                 + (f', de 7 daarvoor +{fmt(w0)} ({"+" if w1 >= w0 else ""}{round(100 * (w1 - w0) / w0)}%)' if w0 else ''))
+    return ('<h3>Trend <span class="sub">' + html.escape(vergelijk) + '</span></h3>'
+            '<div class="scroll"><table class="trend"><tr><th>Dag</th><th>Views erbij</th><th></th><th>Likes</th><th>Saves</th><th>Reacties</th><th>Nieuwe video\'s</th></tr>'
+            + rows + '</table></div>')
+
+
+def nav_html(dag, prefix):
+    dagen = sorted(p.stem for p in (ROOT / 'dagen').glob('20*.html')) if (ROOT / 'dagen').exists() else []
+    if dag and dag not in dagen:
+        dagen.append(dag)
+        dagen.sort()
+    links = [f'<a href="{prefix}index.html">Vandaag</a>', f'<a href="{prefix}dagen/index.html">Archief ({len(dagen)} dagen)</a>']
+    if dag in dagen and dagen.index(dag) > 0:
+        vorige = dagen[dagen.index(dag) - 1]
+        links.append(f'<a href="{prefix}dagen/{vorige}.html">Vorige dag ({vorige[8:10]}-{vorige[5:7]})</a>')
+    links.append(f'<a href="{prefix}data/export.csv">Export (csv)</a>')
+    titel = f' · stand {dag[8:10]}-{dag[5:7]}-{dag[:4]}' if dag else ''
+    return f'<div class="sub nav">{" · ".join(links)}{titel}</div>'
+
+
+def schrijf_weken():
+    """data/weken/<jaar>-W<nr>.md (geschreven door de agent op maandag) als losse pagina's."""
+    src = ROOT / 'data' / 'weken'
+    if not src.exists():
+        return []
+    (ROOT / 'weken').mkdir(exist_ok=True)
+    out = []
+    for f in sorted(src.glob('*.md')):
+        body = md_blok(f.read_text(encoding='utf-8'))
+        (ROOT / 'weken' / f'{f.stem}.html').write_text(
+            f'<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
+            f'<title>Week {f.stem}</title><style>body{{font:15px/1.5 -apple-system,Inter,sans-serif;max-width:760px;margin:0 auto;padding:24px 16px;background:#fafaf8;color:#1b1b1f}}'
+            f'@media (prefers-color-scheme:dark){{body{{background:#111116;color:#ececf0}}a{{color:#ececf0}}}}</style></head><body>'
+            f'<p><a href="../index.html">Terug naar vandaag</a></p>{body}</body></html>', encoding='utf-8')
+        out.append((f.stem, body))
+    return out
+
+
+def md_blok(t):
+    uit, lijst = [], False
+    for r in t.splitlines():
+        r = r.rstrip()
+        if r.startswith(('- ', '* ')):
+            if not lijst:
+                uit.append('<ul>'); lijst = True
+            uit.append(f'<li>{md_inline(r[2:])}</li>')
+            continue
+        if lijst:
+            uit.append('</ul>'); lijst = False
+        if r.startswith('#'):
+            n = min(len(r) - len(r.lstrip('#')) + 1, 4)
+            uit.append(f'<h{n}>{md_inline(r.lstrip("# "))}</h{n}>')
+        elif r.strip():
+            uit.append(f'<p>{md_inline(r)}</p>')
+    if lijst:
+        uit.append('</ul>')
+    return ''.join(uit)
+
+
+def week_html(weken, prefix):
+    if not weken:
+        return ''
+    stem, body = weken[-1]
+    oud = ' · '.join(f'<a href="{prefix}weken/{w}.html">{w}</a>' for w, _ in reversed(weken[:-1]))
+    return (f'<section id="week"><h2>Weekoverzicht {html.escape(stem)} <span class="sub">elke maandag door de agent'
+            + (f' · eerder: {oud}' if oud else '') + f'</span></h2>{body}</section>')
+
+
+def schrijf_archief(trend, labels):
+    dagen = sorted((p.stem for p in (ROOT / 'dagen').glob('20*.html')), reverse=True)
+    perdag = defaultdict(dict)
+    for acc, lst in trend.items():
+        for d in lst:
+            perdag[d['dag']][acc] = d
+    accs = list(trend)
+    kop = ''.join(f'<th>{html.escape(labels.get(a, a))}: views erbij</th>' for a in accs)
+    rows = ''
+    for d in dagen:
+        cel = ''.join(f'<td class="n">{("+" + fmt(perdag[d][a]["erbij_views"])) if a in perdag[d] and "erbij_views" in perdag[d][a] else "–"}</td>' for a in accs)
+        heeft_noot = (ROOT / 'data' / 'notities' / f'{d}.md').exists()
+        rows += f'<tr><td><a href="{d}.html">{d[8:10]}-{d[5:7]}-{d[:4]}</a></td>{cel}<td>{"notitie" if heeft_noot else ""}</td></tr>'
+    (ROOT / 'dagen' / 'index.html').write_text(
+        '<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Archief TikTok-monitor</title>'
+        '<style>body{font:15px/1.5 -apple-system,Inter,sans-serif;max-width:900px;margin:0 auto;padding:24px 16px;background:#fafaf8;color:#1b1b1f}'
+        'table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:7px 8px;border-bottom:1px solid #e4e4e0}td.n{text-align:right}'
+        '@media (prefers-color-scheme:dark){body{background:#111116;color:#ececf0}a{color:#ececf0}th,td{border-color:#2a2a33}}</style></head><body>'
+        '<p><a href="../index.html">Terug naar vandaag</a></p><h1>Archief</h1><p>Elke dag een eigen pagina, zoals hij die ochtend was.</p>'
+        f'<div style="overflow-x:auto"><table><tr><th>Dag</th>{kop}<th></th></tr>{rows}</table></div></body></html>', encoding='utf-8')
+
+
+def schrijf_export(per_acc):
+    p = ROOT / 'data' / 'export.csv'
+    with open(p, 'w', encoding='utf-8', newline='') as f:
+        w = csv.writer(f)
+        w.writerow(['account', 'groep', 'gepost', 'leeftijd_dagen', 'duur_s', 'views', 'likes', 'reacties', 'shares', 'saves',
+                    'x_mediaan', 'likes_pct', 'saves_pct', 'shares_pct', 'url', 'omschrijving'])
+        for acc, lst in per_acc.items():
+            for v in sorted(lst, key=lambda v: -(v['posted'] or 0)):
+                w.writerow([acc, v['groep'], time.strftime('%Y-%m-%d', time.gmtime(v['posted'])), v['leeftijd'], v['duur'], v['views'],
+                            v['likes'], v['comm'], v['shares'], v['saves'], v.get('x'), v.get('likes_pct'), v.get('saves_pct'),
+                            v.get('shares_pct'), v['url'], (v['desc'] or '').replace('\n', ' ')])
 
 
 def badge(x):
@@ -190,7 +353,7 @@ def fmt(n):
     return '' if n is None else f'{n:,}'.replace(',', '.')
 
 
-def dashboard(s, eigen, radar, mediaan, labels, werkt, veranderd):
+def dashboard(s, eigen, radar, mediaan, labels, werkt, veranderd, trend=None, dag='', prefix='', weken=None):
     e = html.escape
     OUD = ' <span class="b up">oud, groeit weer</span>'
     noot = notities()
@@ -214,17 +377,20 @@ def dashboard(s, eigen, radar, mediaan, labels, werkt, veranderd):
             f'<td class="n">{v["shares_pct"] or 0}%</td><td class="n">{v["comm"]}</td>'
             f'<td class="n">{fmt(v.get("v24")) or "–"}</td><td class="n">{fmt(v.get("v7d")) or "–"}</td></tr>'
             for v in eigen[acc][:25])
-        items = ''.join(f'<li>{e(r)}</li>' for r in noot.get(naam.lower(), []))
+        items = ''.join(f'<li>{md_inline(r)}</li>' for r in noot.get(naam.lower(), []))
         parts.append(
             f'<section class="person" id="{e(acc)}"><h2>{e(naam)} <span class="sub">@{e(acc)} · mediaan {fmt(mediaan.get(acc))} views</span></h2>'
             + (f'<h3>Wat valt op</h3><ul class="note">{items}</ul>' if items else '')
+            + trend_html((trend or {}).get(acc, []))
             + f'<h3>Laatste {uren} uur <span class="sub">+{fmt(tot["views"])} views · +{tot["likes"]} likes · +{tot["comm"]} reacties · +{tot["saves"]} saves · +{tot["shares"]} shares</span></h3>'
             '<div class="scroll"><table><tr><th>Video</th><th>Leeftijd</th><th>Views</th><th>Likes</th><th>Reacties</th><th>Saves</th><th>Shares</th></tr>'
             f'{drows or "<tr><td colspan=7>Nog geen veranderingen gemeten.</td></tr>"}</table></div>'
             '<h3>Alle video\'s</h3><div class="scroll"><table><tr><th>Post</th><th>Video</th><th>Views</th><th>t.o.v. mediaan</th>'
             '<th>Likes</th><th>Saves</th><th>Shares</th><th>Reacties</th><th>Na 24 u</th><th>Na 7 d</th></tr>'
             f'{vrows}</table></div></section>')
-    niche_items = ''.join(f'<li>{e(r)}</li>' for r in noot.get('niche', []))
+    niche_items = ''.join(f'<li>{md_inline(r)}</li>' for r in noot.get('niche', []))
+    nav = nav_html(dag, prefix)
+    week_sec = week_html(weken or [], prefix)
     werkt_rows = ''.join(f'<tr><td>{e(w["soort"])}</td><td>{e(w["naam"])}</td><td class="n">{w["n"]}</td><td>{badge(w["mediaan_x"])}</td></tr>'
                          for w in sorted(werkt, key=lambda w: -w['mediaan_x']))
     radar_rows = ''.join(f'<tr><td>@{e(v["account"])}</td><td class="cap"><a href="{v["url"]}">{e((v["desc"] or "")[:80])}</a></td>'
@@ -243,11 +409,11 @@ main{{max-width:1100px;margin:0 auto;padding:24px 16px 64px}} h1{{font-size:24px
 th{{color:var(--mut);font-weight:500;font-size:12px;white-space:nowrap}} td.n{{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}}
 td.cap{{min-width:260px}} a{{color:inherit}} .b{{display:inline-block;padding:1px 7px;border-radius:99px;font-size:12px;border:1px solid var(--line)}}
 .up{{color:var(--up);border-color:var(--up)}} .down{{color:var(--down);border-color:var(--down)}} .mid{{color:var(--mid);border-color:var(--mid)}}
-ul{{color:var(--mut);font-size:13px}} ul.note{{color:var(--fg);font-size:15px}}
+ul{{color:var(--mut);font-size:13px}} ul.note{{color:var(--fg);font-size:15px}} .nav{{margin:4px 0 10px}} .nav a{{font-weight:600}} .bar{{height:10px;background:var(--up);border-radius:3px;min-width:2px}} table.trend td{{padding:4px 8px}}
 </style></head><body><main>
-<h1>TikTok-monitor</h1><div class="sub"><a href="#dennis.dekort">Dennis</a> · <a href="#kayaguness">Kaya</a> · <a href="#niche">Niche</a></div><div class="sub">Bijgewerkt {e(s["gemaakt"])} · openbare cijfers per video (views, likes, reacties, shares, saves) · "t.o.v. mediaan" = views gedeeld door de mediaan van dat account (video's van 3+ dagen oud)</div>
+<h1>TikTok-monitor</h1>{nav}<div class="sub"><a href="#dennis.dekort">Dennis</a> · <a href="#kayaguness">Kaya</a> · <a href="#niche">Niche</a></div><div class="sub">Bijgewerkt {e(s["gemaakt"])} · openbare cijfers per video (views, likes, reacties, shares, saves) · "t.o.v. mediaan" = views gedeeld door de mediaan van dat account (video's van 3+ dagen oud)</div>
 {"".join(parts)}
-<section><h2>Wat werkt bij ons <span class="sub">Bali-video's per thema en opnamevorm, mediaan t.o.v. de accountmediaan (vanaf 2 dagen oud)</span></h2>
+{week_sec}<section><h2>Wat werkt bij ons <span class="sub">Bali-video's per thema en opnamevorm, mediaan t.o.v. de accountmediaan (vanaf 2 dagen oud)</span></h2>
 <div class="scroll"><table><tr><th>Soort</th><th>Groep</th><th>Video's</th><th>Mediaan</th></tr>{werkt_rows or '<tr><td colspan=4>Nog te weinig data.</td></tr>'}</table></div></section>
 <section id="niche"><h2>Niche-radar <span class="sub">video's van NL-ecomaccounts uit de laatste 14 dagen met 3× of meer hun eigen mediaan</span></h2>
 {('<ul class="note">' + niche_items + '</ul>') if niche_items else ''}<div class="scroll"><table><tr><th>Account</th><th>Video</th><th>Views</th><th>t.o.v. mediaan</th><th>Saves</th></tr>{radar_rows or '<tr><td colspan=5>Geen uitschieters.</td></tr>'}</table></div></section>
