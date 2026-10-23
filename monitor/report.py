@@ -164,13 +164,19 @@ def main():
     print('index.html en data/samenvatting.json bijgewerkt')
 
 
-def notitie_html():
+def notities():
+    """data/notitie.md van de agent, opgesplitst per kopje (## Dennis, ## Kaya, ## Niche)."""
     p = ROOT / 'data' / 'notitie.md'
+    out, kop = {}, 'algemeen'
     if not p.exists():
-        return ''
-    regels = [r.strip() for r in p.read_text(encoding='utf-8').splitlines() if r.strip()]
-    items = ''.join(f'<li>{html.escape(r.lstrip("-* ").strip())}</li>' for r in regels)
-    return f'<section><h2>Wat valt op vandaag</h2><ul class="note">{items}</ul></section>'
+        return out
+    for r in p.read_text(encoding='utf-8').splitlines():
+        r = r.strip()
+        if r.startswith('#'):
+            kop = r.lstrip('# ').strip().lower()
+        elif r:
+            out.setdefault(kop, []).append(r.lstrip('-* ').strip())
+    return out
 
 
 def badge(x):
@@ -187,34 +193,38 @@ def fmt(n):
 def dashboard(s, eigen, radar, mediaan, labels, werkt, veranderd):
     e = html.escape
     OUD = ' <span class="b up">oud, groeit weer</span>'
+    noot = notities()
     parts = []
-    for acc, lst in veranderd.items():
+    for acc in eigen:
+        naam = labels.get(acc, acc)
+        lst = veranderd.get(acc, [])
         tot = {k: sum(v['delta'][k] for v in lst) for k in ['views', 'likes', 'comm', 'saves', 'shares']}
         uren = max([v['delta']['uren'] for v in lst] or [0])
-        rows = ''.join(
+        drows = ''.join(
             f'<tr><td class="cap"><a href="{v["url"]}">{e((v["desc"] or "")[:70])}</a>'
             f'{OUD if v.get("oud_groeit") else ""}</td>'
             f'<td>{v["leeftijd"]:.0f} d</td><td class="n">+{fmt(v["delta"]["views"])}</td><td class="n">+{v["delta"]["likes"]}</td>'
             f'<td class="n">+{v["delta"]["comm"]}</td><td class="n">+{v["delta"]["saves"]}</td><td class="n">+{v["delta"]["shares"]}</td></tr>'
             for v in lst[:12])
-        parts.append(f'<section><h2>Laatste {uren} uur · {e(labels.get(acc, acc))} <span class="sub">+{fmt(tot["views"])} views · +{tot["likes"]} likes · '
-                     f'+{tot["comm"]} reacties · +{tot["saves"]} saves · +{tot["shares"]} shares</span></h2>'
-                     '<div class="scroll"><table><tr><th>Video</th><th>Leeftijd</th><th>Views</th><th>Likes</th><th>Reacties</th><th>Saves</th><th>Shares</th></tr>'
-                     f'{rows or "<tr><td colspan=7>Nog geen veranderingen gemeten.</td></tr>"}</table></div></section>')
-    for acc, lst in eigen.items():
-        rows = ''.join(
+        vrows = ''.join(
             f'<tr><td>{time.strftime("%d-%m", time.localtime(v["posted"]))}</td>'
-            f'<td class="cap"><a href="{v["url"]}">{e((v["desc"] or "")[:70])}</a>'
-            f'{"<div class=sub>" + e(v["script"]["titel"]) + "</div>" if v.get("script") else ""}</td>'
+            f'<td class="cap"><a href="{v["url"]}">{e((v["desc"] or "")[:70])}</a></td>'
             f'<td class="n">{fmt(v["views"])}</td><td>{badge(v.get("x"))}</td>'
             f'<td class="n">{v["likes_pct"] or 0}%</td><td class="n">{v["saves_pct"] or 0}%</td>'
             f'<td class="n">{v["shares_pct"] or 0}%</td><td class="n">{v["comm"]}</td>'
             f'<td class="n">{fmt(v.get("v24")) or "–"}</td><td class="n">{fmt(v.get("v7d")) or "–"}</td></tr>'
-            for v in lst[:25])
-        parts.append(f'<section><h2>{e(labels.get(acc, acc))} <span class="sub">@{e(acc)} · mediaan {fmt(mediaan.get(acc))} views</span></h2>'
-                     '<div class="scroll"><table><tr><th>Post</th><th>Video</th><th>Views</th><th>t.o.v. mediaan</th>'
-                     '<th>Likes</th><th>Saves</th><th>Shares</th><th>Reacties</th><th>Na 24 u</th><th>Na 7 d</th></tr>'
-                     f'{rows}</table></div></section>')
+            for v in eigen[acc][:25])
+        items = ''.join(f'<li>{e(r)}</li>' for r in noot.get(naam.lower(), []))
+        parts.append(
+            f'<section class="person" id="{e(acc)}"><h2>{e(naam)} <span class="sub">@{e(acc)} · mediaan {fmt(mediaan.get(acc))} views</span></h2>'
+            + (f'<h3>Wat valt op</h3><ul class="note">{items}</ul>' if items else '')
+            + f'<h3>Laatste {uren} uur <span class="sub">+{fmt(tot["views"])} views · +{tot["likes"]} likes · +{tot["comm"]} reacties · +{tot["saves"]} saves · +{tot["shares"]} shares</span></h3>'
+            '<div class="scroll"><table><tr><th>Video</th><th>Leeftijd</th><th>Views</th><th>Likes</th><th>Reacties</th><th>Saves</th><th>Shares</th></tr>'
+            f'{drows or "<tr><td colspan=7>Nog geen veranderingen gemeten.</td></tr>"}</table></div>'
+            '<h3>Alle video\'s</h3><div class="scroll"><table><tr><th>Post</th><th>Video</th><th>Views</th><th>t.o.v. mediaan</th>'
+            '<th>Likes</th><th>Saves</th><th>Shares</th><th>Reacties</th><th>Na 24 u</th><th>Na 7 d</th></tr>'
+            f'{vrows}</table></div></section>')
+    niche_items = ''.join(f'<li>{e(r)}</li>' for r in noot.get('niche', []))
     werkt_rows = ''.join(f'<tr><td>{e(w["soort"])}</td><td>{e(w["naam"])}</td><td class="n">{w["n"]}</td><td>{badge(w["mediaan_x"])}</td></tr>'
                          for w in sorted(werkt, key=lambda w: -w['mediaan_x']))
     radar_rows = ''.join(f'<tr><td>@{e(v["account"])}</td><td class="cap"><a href="{v["url"]}">{e((v["desc"] or "")[:80])}</a></td>'
@@ -227,7 +237,7 @@ def dashboard(s, eigen, radar, mediaan, labels, werkt, veranderd):
 :root{{--bg:#fafaf8;--fg:#1b1b1f;--mut:#6b6b74;--line:#e4e4e0;--card:#fff;--up:#1f8a4c;--down:#b3402b;--mid:#8a7a1f}}
 @media (prefers-color-scheme:dark){{:root{{--bg:#111116;--fg:#ececf0;--mut:#9a9aa6;--line:#2a2a33;--card:#18181f;--up:#4cc27f;--down:#e0745d;--mid:#d6c35a}}}}
 body{{margin:0;background:var(--bg);color:var(--fg);font:15px/1.45 -apple-system,Inter,sans-serif}}
-main{{max-width:1100px;margin:0 auto;padding:24px 16px 64px}} h1{{font-size:24px;margin:0 0 4px}} h2{{font-size:18px;margin:32px 0 10px}}
+main{{max-width:1100px;margin:0 auto;padding:24px 16px 64px}} h1{{font-size:24px;margin:0 0 4px}} h2{{font-size:20px;margin:24px 0 8px}} h3{{font-size:15px;margin:18px 0 6px}} section.person{{border-width:2px}}
 .sub{{color:var(--mut);font-size:13px;font-weight:400}} section{{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:4px 16px 12px;margin-top:16px}}
 .scroll{{overflow-x:auto}} table{{border-collapse:collapse;width:100%;font-size:14px}} th,td{{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top}}
 th{{color:var(--mut);font-weight:500;font-size:12px;white-space:nowrap}} td.n{{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}}
@@ -235,12 +245,12 @@ td.cap{{min-width:260px}} a{{color:inherit}} .b{{display:inline-block;padding:1p
 .up{{color:var(--up);border-color:var(--up)}} .down{{color:var(--down);border-color:var(--down)}} .mid{{color:var(--mid);border-color:var(--mid)}}
 ul{{color:var(--mut);font-size:13px}} ul.note{{color:var(--fg);font-size:15px}}
 </style></head><body><main>
-<h1>TikTok-monitor</h1>{notitie_html()}<div class="sub">Bijgewerkt {e(s["gemaakt"])} · openbare cijfers per video (views, likes, reacties, shares, saves) · "t.o.v. mediaan" = views gedeeld door de mediaan van dat account (video's van 3+ dagen oud)</div>
+<h1>TikTok-monitor</h1><div class="sub"><a href="#dennis.dekort">Dennis</a> · <a href="#kayaguness">Kaya</a> · <a href="#niche">Niche</a></div><div class="sub">Bijgewerkt {e(s["gemaakt"])} · openbare cijfers per video (views, likes, reacties, shares, saves) · "t.o.v. mediaan" = views gedeeld door de mediaan van dat account (video's van 3+ dagen oud)</div>
 {"".join(parts)}
 <section><h2>Wat werkt bij ons <span class="sub">Bali-video's per thema en opnamevorm, mediaan t.o.v. de accountmediaan (vanaf 2 dagen oud)</span></h2>
 <div class="scroll"><table><tr><th>Soort</th><th>Groep</th><th>Video's</th><th>Mediaan</th></tr>{werkt_rows or '<tr><td colspan=4>Nog te weinig data.</td></tr>'}</table></div></section>
-<section><h2>Niche-radar <span class="sub">video's van NL-ecomaccounts uit de laatste 14 dagen met 3× of meer hun eigen mediaan</span></h2>
-<div class="scroll"><table><tr><th>Account</th><th>Video</th><th>Views</th><th>t.o.v. mediaan</th><th>Saves</th></tr>{radar_rows or '<tr><td colspan=5>Geen uitschieters.</td></tr>'}</table></div></section>
+<section id="niche"><h2>Niche-radar <span class="sub">video's van NL-ecomaccounts uit de laatste 14 dagen met 3× of meer hun eigen mediaan</span></h2>
+{('<ul class="note">' + niche_items + '</ul>') if niche_items else ''}<div class="scroll"><table><tr><th>Account</th><th>Video</th><th>Views</th><th>t.o.v. mediaan</th><th>Saves</th></tr>{radar_rows or '<tr><td colspan=5>Geen uitschieters.</td></tr>'}</table></div></section>
 <section><h2>Laatste ophaalronde</h2><ul>{runs}</ul></section>
 </main></body></html>'''
 
