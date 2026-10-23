@@ -12,7 +12,8 @@ def fetch(handle, limit, kanaal_id=None):
     url = f'tiktokuser:{kanaal_id}' if kanaal_id else f'https://www.tiktok.com/@{handle}'
     err = ''
     for attempt in range(2):
-        p = subprocess.run([YTDLP, '--flat-playlist', '--dump-json', '--playlist-end', str(limit), url],
+        # no-certifi: gebruik de certificaten van het systeem (nodig achter de proxy van een cloudomgeving)
+        p = subprocess.run([YTDLP, '--compat-options', 'no-certifi', '--flat-playlist', '--dump-json', '--playlist-end', str(limit), url],
                            capture_output=True, text=True, timeout=90)
         rows = [json.loads(l) for l in p.stdout.splitlines() if l.strip().startswith('{')]
         if rows:
