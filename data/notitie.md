@@ -1,16 +1,15 @@
 ## Dennis
-- "Hard to work" (7 seconden, 30 dagen oud) groeit opnieuw: 29.100 views, 2.282 likes, 486 shares, 116 saves en 9 reacties erbij in 23 uur, nu 49.000 views (84,6x de mediaan van 579).
-- Nieuwe video "#bro #lockedin #entrepreneur" (17 seconden) staat na een halve dag op 4.301 views, 7,4x de mediaan; de Black Friday-video (42 seconden) blijft na 1,6 dag op 340 views, 0,6x de mediaan.
-- Account totaal 33.647 views, 119 saves en 14 reacties erbij vandaag; er is pas één eerdere meting, dus vergelijken met gisteren of vorige week kan nog niet.
-- **Tip:** De twee uitschieters duren 7 en 17 seconden, de Black Friday-uitleg van 42 seconden blijft op 0,6x; knip de ACM-regel terug tot een clip van onder de 20 seconden die opent met "laagste prijs van de afgelopen 30 dagen" en zet onder "Hard to work" een pinned comment die ernaar verwijst.
+- "Hard to work" (7 seconden, 31 dagen oud) groeit opnieuw: 18.800 views, 1.620 likes, 303 shares, 85 saves en 6 reacties erbij in 24 uur, nu 67.800 views (115,4x de mediaan van 587,5).
+- Nieuwe video over productonderzoek (38 seconden) staat na een halve dag op 228 views, 0,4x de mediaan; "#bro #lockedin" (17 seconden) kreeg 238 views erbij en staat op 4.539 views (7,7x), de Black Friday-video (42 seconden) op 370 views (0,6x).
+- Account: 19.407 views erbij vandaag tegen 33.647 gisteren; 90 saves en 6 reacties erbij. Te weinig dagen om de laatste 7 dagen met de 7 daarvoor te vergelijken.
+- **Tip:** "Hard to work" trekt nog 18.800 views per dag, terwijl de productonderzoek-video met de DM-oproep op 228 views blijft; zet onder "Hard to work" een pinned comment met dezelfde oproep (stuur PRODUCT in m'n DM) zodat dat verkeer ergens naartoe gaat.
 
 ## Kaya
-- Grootste groei: "generational run" met 234 views, 12 likes en 1 reactie erbij; geen oudere video groeit opnieuw.
-- Nieuwe video "SCHIJTMAXXING" staat na een halve dag op 1.351 views (0,5x de mediaan van 2.555,5), maar heeft al 25 reacties.
-- Account totaal 2.708 views, 22 reacties en 13 saves erbij vandaag; te weinig metingen om met gisteren of vorige week te vergelijken.
-- **Tip:** Van de vier video's van de afgelopen 7 dagen haalde alleen "He Claude maak me miljonair (je mag geen fouten maken)" de mediaan (10.100 views, 4,0x); maak daar een deel 2 van met dezelfde opening: een directe opdracht aan Claude met een uitdaging erbij.
+- Grootste groei: "SCHIJTMAXXING" met 347 views en 4 saves erbij, nu 1.698 views (0,7x de mediaan van 2.523,5); "generational run" kreeg 129 views erbij. Geen oudere video groeit opnieuw en er kwam geen nieuwe video bij.
+- Account: 1.250 views erbij vandaag tegen 2.708 gisteren; 0 reacties en 8 saves erbij. Te weinig dagen om de laatste 7 dagen met de 7 daarvoor te vergelijken.
+- **Tip:** "SCHIJTMAXXING" heeft met 25 reacties de meeste reacties van de afgelopen 7 dagen maar blijft op 0,7x de mediaan; beantwoord de beste reactie met een videoreactie, zodat dat gesprek een nieuwe video oplevert.
 
 ## Niche
-- thomasvdleck: video zonder caption (99 seconden) op 53.800 views, 14,5x de mediaan, met 3,86% saves.
-- bramkoningsecom: "Waarom liggen ineens zoveel websites in Nederland plat…" op 24.800 views, 11,3x de mediaan.
-- **Te leren:** De sterkste caption met tekst is actueel nieuws in vraagvorm, met een belofte om het uit te leggen.
+- jeeigenwebshop: video die opent met een scène ("Ik wilde Leo aan onze webshop software helpen... Toen liep hij weg") op 28.700 views, 57,1x de mediaan.
+- bramkoningsecom: "Waarom liggen ineens zoveel websites in Nederland plat…" op 25.100 views, 11,2x de mediaan.
+- **Te leren:** Beide openen op iets concreets dat net gebeurde: een scène met een persoon of actueel nieuws als vraag, met de uitleg of afloop pas daarna.
