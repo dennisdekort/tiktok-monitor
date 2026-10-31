@@ -1,16 +1,17 @@
 ## Dennis
-- "Hard to work" (37,6 dagen oud) groeit nog steeds: 2.100 views, 16 saves en 1 reactie erbij in 24 uur, nu 99.100 views.
-- De clip zonder caption (10 seconden, 1,6 dagen oud) staat op 4.157 views, 7,5x de mediaan van 552, maar kreeg in 24 uur nog maar 69 views erbij.
-- Vandaag 2.281 views erbij tegen 7.230 gisteren. Voor 7 dagen tegen de 7 daarvoor is nog te weinig data.
-- **Tip:** Maak een deel 2 van "Hard to work" in hetzelfde korte format (7 seconden): die video haalt na ruim 5 weken nog 2.100 views per dag, en de korte clips van 10 en 17 seconden haalden 7,5x en 8,5x de mediaan.
+- "Hard to work" (38,6 dagen oud) groeit nog steeds: 1.600 views, 9 saves en 1 reactie erbij in 24 uur, nu 100.700 views.
+- Nieuwe video (#lockedin, 19 seconden, 0,7 dagen oud) staat na de eerste dag op 3.998 views, 7,2x de mediaan van 552.
+- Vandaag 5.692 views erbij tegen 2.281 gisteren. Voor 7 dagen tegen de 7 daarvoor is nog te weinig data.
+- **Tip:** De korte mindset-clips van 19, 17 en 10 seconden haalden 7,2x, 8,5x en 7,6x de mediaan, terwijl de uitlegvideo's van 38 tot 100 seconden (Meta ads, productonderzoek, Black Friday) op 0,6x tot 0,7x blijven: zet de volgende advertentietip als tekst in zo'n clip van onder de 20 seconden.
 
 ## Kaya
-- "Nog nooit zo stressed geweest" (1,5 dagen oud) kreeg 1.267 views, 4 saves en 1 reactie erbij en staat op 3.172 views, 1,3x de mediaan van 2.414.
-- Nieuwe video "Product research" (125 seconden, 0,7 dagen oud) staat op 1.904 views (0,8x de mediaan), met 2,57% saves en 3 reacties.
-- Vandaag 4.804 views en 58 saves erbij tegen 1.232 views en -9 saves gisteren. Voor 7 dagen tegen de 7 daarvoor is nog te weinig data.
-- **Tip:** Maak een deel 2 van "Product research": bij Google ads haalde deel 1 3.398 views (1,4x) en deel 2 5.565 views (2,3x), en deze video wordt al vaker bewaard (2,57%) dan de meeste van haar video's.
+- "Product research" (1,7 dagen oud) kreeg 321 views en 8 saves erbij en staat op 2.225 views, 0,9x de mediaan van 2.471, met 2,56% saves.
+- "Nog nooit zo stressed geweest" kreeg 310 views en 2 saves erbij en staat op 3.482 views, 1,4x de mediaan.
+- Nieuwe video (24 seconden, 0,6 dagen oud) staat op 1.091 views, 0,4x de mediaan, maar wel met 10 reacties.
+- Vandaag 2.710 views erbij tegen 4.804 gisteren. Voor 7 dagen tegen de 7 daarvoor is nog te weinig data.
+- **Tip:** Maak een deel 2 van "Product research": bij Google ads haalde deel 1 3.424 views (1,4x) en deel 2 5.601 views (2,3x), en deze video wordt met 2,56% al bijna even vaak bewaard als die twee (3,07% en 2,61%).
 
 ## Niche
-- jeeigenwebshop: video over een voorbijganger die ze hun webshopsoftware wilden aanbieden, 44.000 views, 83,0x de eigen mediaan.
-- thomasvdleck: "Je weet precies wat je fout doet", 210.900 views, 55,3x de eigen mediaan.
-- **Te leren:** De uitschieters van thomasvdleck hebben een korte caption die de kijker direct aanspreekt ("Je weet precies wat je fout doet" 55,3x, "Dit zegt genoeg over iemand" 11,3x, "Nu ga je dit overal herkennen" 5,1x).
+- jeeigenwebshop: video over een voorbijganger die ze hun webshopsoftware wilden aanbieden, 44.000 views, 83,6x de eigen mediaan.
+- thomasvdleck: "Je weet precies wat je fout doet", 216.900 views, 52,7x de eigen mediaan.
+- **Te leren:** De uitschieters van thomasvdleck hebben een korte caption die de kijker direct aanspreekt ("Je weet precies wat je fout doet" 52,7x, "Dit zegt genoeg over iemand" 16,0x, "Nu ga je dit overal herkennen" 15,0x).
