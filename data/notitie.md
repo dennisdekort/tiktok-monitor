@@ -1,17 +1,17 @@
 ## Dennis
-- "Hard to work" (38,6 dagen oud) groeit nog steeds: 1.600 views, 9 saves en 1 reactie erbij in 24 uur, nu 100.700 views.
-- Nieuwe video (#lockedin, 19 seconden, 0,7 dagen oud) staat na de eerste dag op 3.998 views, 7,2x de mediaan van 552.
-- Vandaag 5.692 views erbij tegen 2.281 gisteren. Voor 7 dagen tegen de 7 daarvoor is nog te weinig data.
-- **Tip:** De korte mindset-clips van 19, 17 en 10 seconden haalden 7,2x, 8,5x en 7,6x de mediaan, terwijl de uitlegvideo's van 38 tot 100 seconden (Meta ads, productonderzoek, Black Friday) op 0,6x tot 0,7x blijven: zet de volgende advertentietip als tekst in zo'n clip van onder de 20 seconden.
+- "Hard to work" (7 seconden, 39,6 dagen oud) groeit nog steeds: +900 views en +91 likes in 24 uur, nu 101.600 views (176,5x de mediaan van 575,5).
+- De nieuwste video (#lockedin, 19 seconden) haalde 4.014 views op dag 1 en staat nu op 4.049 views (7,0x de mediaan); de twee andere korte mindsetvideo's van 10 en 17 seconden staan op 7,3x en 8,2x.
+- De uitlegvideo's van de afgelopen 11 dagen (38 tot 100 seconden) blijven op 0,6x tot 0,7x de mediaan, maar halen wel de meeste saves (2,02% en 1,15% tegen 0,4% bij de nieuwste).
+- Trend: 1.005 views erbij vandaag tegen 5.692 gisteren; 37.361 erbij over de laatste 7 dagen, te weinig data om met de 7 dagen ervoor te vergelijken.
+- **Tip:** Het korte format onder 20 seconden zat drie keer op 7x of meer, dus open de volgende uitlegvideo met zo'n shot van 10 seconden en zet de uitleg in een vastgezette reactie of een deel 2.
 
 ## Kaya
-- "Product research" (1,7 dagen oud) kreeg 321 views en 8 saves erbij en staat op 2.225 views, 0,9x de mediaan van 2.471, met 2,56% saves.
-- "Nog nooit zo stressed geweest" kreeg 310 views en 2 saves erbij en staat op 3.482 views, 1,4x de mediaan.
-- Nieuwe video (24 seconden, 0,6 dagen oud) staat op 1.091 views, 0,4x de mediaan, maar wel met 10 reacties.
-- Vandaag 2.710 views erbij tegen 4.804 gisteren. Voor 7 dagen tegen de 7 daarvoor is nog te weinig data.
-- **Tip:** Maak een deel 2 van "Product research": bij Google ads haalde deel 1 3.424 views (1,4x) en deel 2 5.601 views (2,3x), en deze video wordt met 2,56% al bijna even vaak bewaard als die twee (3,07% en 2,61%).
+- Grootste groei in 24 uur: de nieuwste video (24 seconden) +222 views en +3 reacties, en "Product research" (125 seconden) +170 views en +7 saves.
+- De nieuwste video haalde 1.170 views op dag 1, 0,5x de mediaan van 2.434,5; "Product research" staat op 2.395 views (1,0x) met 2,67% saves, het hoogste van de laatste 7 dagen.
+- Trend: het totaal staat vandaag 482 views lager dan gisteren (gisteren +2.710), terwijl de losse video's wel groeiden; waarschijnlijk valt een video buiten de opgehaalde lijst. Over 7 dagen +11.012, te weinig data voor de vergelijking met de week ervoor.
+- **Tip:** Lange uitlegvideo's in delen deden het eerder boven de mediaan ("Part 2" 5.621 views, 2,3x; "Google ads Pt1" 3.435 views, 1,4x), dus maak van "Product research" een deel 2 en noem dat in de caption.
 
 ## Niche
-- jeeigenwebshop: video over een voorbijganger die ze hun webshopsoftware wilden aanbieden, 44.000 views, 83,6x de eigen mediaan.
-- thomasvdleck: "Je weet precies wat je fout doet", 216.900 views, 52,7x de eigen mediaan.
-- **Te leren:** De uitschieters van thomasvdleck hebben een korte caption die de kijker direct aanspreekt ("Je weet precies wat je fout doet" 52,7x, "Dit zegt genoeg over iemand" 16,0x, "Nu ga je dit overal herkennen" 15,0x).
+- @jeeigenwebshop: verhaal over "Leo" die wegloopt, 44.100 views (83,6x de mediaan); @thomasvdleck: "Je weet precies wat je fout doet", 223.000 views (51,8x).
+- @thomasvdleck heeft vijf video's boven 10x, allemaal met een korte caption die de kijker direct aanspreekt of herkenning belooft ("Nu ga je dit overal herkennen" 16,9x, "Dit zegt genoeg over iemand" 16,5x).
+- **Te leren:** Een korte caption van één zin die de kijker met "je" aanspreekt en herkenning belooft, werkt in de niche beter dan een lijst hashtags.
