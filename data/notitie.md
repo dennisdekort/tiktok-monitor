@@ -1,16 +1,15 @@
 ## Dennis
-- "Hard to work" (7 seconden, 40,6 dagen oud) blijft groeien: +800 views, +60 likes en +4 saves in 24 uur, maar 0 nieuwe reacties; nu 102.400 views (177,6x de mediaan van 576,5).
-- Geen nieuwe video in de laatste 24 uur; de nieuwste (#lockedin, 19 seconden, 2,7 dagen oud) kreeg nog 25 views erbij en staat op 4.074 views (7,1x).
-- Trend: 872 views erbij vandaag tegen 1.005 gisteren; 33.157 erbij over de laatste 7 dagen, te weinig data om met de 7 dagen ervoor te vergelijken.
-- **Tip:** "Hard to work" haalt nog 800 views per dag zonder één nieuwe reactie, dus zet er een vastgezette reactie onder met een vraag over ecommerce, zodat die kijkers een reden hebben om te reageren of door te klikken.
+- "Hard to work" (7 seconden, 41,6 dagen oud) groeit weer flink: +2.900 views, +306 likes, +55 shares, +20 saves en +1 reactie in 24 uur; nu 105.300 views (175,8x de mediaan van 599).
+- Geen nieuwe video in de laatste 24 uur; de nieuwste (#lockedin, 19 seconden, 3,7 dagen oud) kreeg +20 views en staat op 4.094 views (6,8x).
+- Trend: 2.963 views erbij vandaag tegen 872 gisteren; 25.823 erbij over de laatste 7 dagen, te weinig data voor een volledige vergelijking met de 7 dagen ervoor.
+- **Tip:** De drie korte clips van 10 tot 19 seconden uit de laatste 12 dagen halen 6,8x tot 7,9x de mediaan, terwijl de vier uitlegvideo's van 38 tot 100 seconden op 0,6x tot 0,7x blijven; zet de kern van je volgende uitleg in een clip van onder de 20 seconden.
 
 ## Kaya
-- Grootste groei in 24 uur: "Het level is leuk als je lief bent voor andere" (58 seconden) +246 views en +13 likes, de nieuwste video +153 views, "Product research" +122 views en +2 saves.
-- Oudere video groeit weer: "Generational lock in" (113,6 dagen oud) +100 views, nu 12.000 views (4,8x de mediaan van 2.521).
-- Trend: +1.109 views vandaag tegen -482 gisteren (toen viel waarschijnlijk een video buiten de opgehaalde lijst); 11.218 erbij over 7 dagen, te weinig data voor de vergelijking met de week ervoor.
-- **Tip:** "Nog nooit zo stressed geweest, nog nooit zo blessed geweest" is met 3.722 views (1,5x) en 17 reacties de beste van deze week, "60u+ creative strategy xx" de zwakste met 1.284 views (0,5x); schrijf de caption van de volgende video ook als één volledige zin over hoe je je voelt in plaats van een kort label.
+- Grootste groei in 24 uur: de nieuwste video (#fy, 24 seconden, 3,6 dagen oud) +134 views en +7 likes, "Nog nooit zo stressed geweest, nog nooit zo blessed geweest" +100 views, "Product research" +98 views met de meeste saves (+3) en shares (+3). Geen video kreeg er reacties bij.
+- Trend: 1.053 views erbij vandaag tegen 1.109 gisteren; 11.259 erbij over de laatste 7 dagen, te weinig data voor de vergelijking met de week ervoor.
+- **Tip:** "Product research" (125 seconden, 2.615 views, 1,0x) heeft 2,64% saves, net als "Part 2 goons" (121 seconden, 5.649 views, 2,2x, 2,62% saves); maak een deel 2 van "Product research" en zet "Part 2" in de caption.
 
 ## Niche
-- @jeeigenwebshop: verhaal over "Leo" die wegloopt, 44.100 views (83,4x de mediaan); @thomasvdleck: "Je weet precies wat je fout doet", 230.600 views (46,0x).
-- @bramkoningsecom zit twee keer hoog met een getal in de caption: "Er is veel veranderd in 10 jaar tijd" 139.700 views (28,7x) en "24 uur leven als miljonair in Milaan" 82.100 views (16,9x).
-- **Te leren:** Een tijdsduur als getal in de eerste woorden ("10 jaar", "24 uur") maakt meteen duidelijk wat de kijker krijgt en scoort in de niche ruim boven de mediaan.
+- @jeeigenwebshop: verhaal over "Leo" die wegloopt, 44.100 views (83,3x de mediaan); @bramkoningsecom: "Er is veel veranderd in 10 jaar tijd", 217.600 views (42,1x).
+- @thomasvdleck haalt drie keer 14x of meer met een korte caption die de kijker aanspreekt: "Je weet precies wat je fout doet" 234.800 views (42,5x), "Nu ga je dit overal herkennen" 81.600 (14,8x), "Dit zegt genoeg over iemand" 78.000 (14,1x).
+- **Te leren:** Een korte zin die de kijker direct aanspreekt maar het antwoord niet verklapt, werkt in de niche herhaaldelijk ver boven de mediaan.
