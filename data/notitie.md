@@ -1,16 +1,16 @@
 ## Dennis
-- "Hard to work" (7 seconden, 42,6 dagen oud) groeit voor de tweede dag op rij: +10.300 views, +1.062 likes, +132 shares, +42 saves maar slechts +1 reactie in 24 uur; nu 115.600 views (193,0x de mediaan van 599).
-- Geen nieuwe video; de rest van het account kreeg samen nauwelijks groei (hoogste: #lockedin +20 views, 4.114 views, 6,9x).
-- Trend: 10.362 views erbij vandaag tegen 2.963 gisteren; 30.405 erbij over de laatste 7 dagen tegen 80.284 in de 6 dagen daarvoor (23 t/m 28 oktober, meer data is er nog niet).
-- **Tip:** "Hard to work" kreeg +10.300 views maar 1 reactie; zet er vandaag een vastgepinde reactie onder met een vraag waar kijkers op kunnen antwoorden, zolang de video nog opnieuw verspreid wordt.
+- "Hard to work" (43,6 dagen oud) groeit opnieuw: +13.700 views, +109 saves en +9 reacties in 24 uur, nu 129.300 views (215,5x de mediaan van 600).
+- Views erbij vandaag 13.793 tegen 10.362 gisteren; de laatste 7 dagen 36.968 tegen 87.514 de 7 dagen daarvoor.
+- Geen nieuwe video sinds 5,7 dagen; de andere video's kregen samen minder dan 100 views erbij.
+- **Tip:** Zet nu een vastgepinde reactie onder "Hard to work" (55 reacties) die verwijst naar een vervolg, en post dat vervolg in hetzelfde korte format van 7 seconden zolang de video nog groeit.
 
 ## Kaya
-- Nieuwe video "Kaya out" (60 seconden, 0,6 dagen oud): 1.112 views (0,4x de mediaan van 2.606,5), maar al 22 reacties en 8,09% likes; het account kreeg vandaag +22 reacties.
-- Grootste groei in 24 uur: "Nog nooit zo stressed geweest, nog nooit zo blessed geweest" +236 views (nu 4.058, 1,6x), de #fy-video van 4,6 dagen +206 views, "Product research" +179 views met de meeste saves (+4).
-- Trend: 2.525 views erbij vandaag tegen 1.053 gisteren; 12.951 erbij over de laatste 7 dagen tegen 8.072 in de 6 dagen daarvoor (23 t/m 28 oktober, meer data is er nog niet).
-- **Tip:** "Kaya out" heeft 22 reacties bij 1.112 views; beantwoord de meest gestelde reactie met een video-reactie, zodat de interactie op deze video naar een nieuwe video wordt doorgezet.
+- "Kaya out" haalde 1.479 views op dag 1, 0,6x de mediaan van 2.643; vandaag +836 views en +2 reacties erbij.
+- "Product research" (125 seconden) kreeg de meeste saves erbij (+5, +187 views) en staat op 2.981 views, 1,1x de mediaan, met 2,62% saves.
+- Views erbij vandaag 4.203 tegen 2.525 gisteren; de laatste 7 dagen 15.922 tegen 9.304 de 7 dagen daarvoor.
+- **Tip:** Maak een deel 2 van "Product research": lange uitlegvideo's zoals "Part 2 goons" (5.705 views, 2,63% saves) en "Google ads Pt1" (3.492 views, 3,06% saves) zitten allebei boven de mediaan.
 
 ## Niche
-- @jeeigenwebshop: verhaal over "Leo" die wegloopt, 44.100 views (83,2x de mediaan); @thomasvdleck: "Je weet precies wat je fout doet", 237.100 views (42,3x).
-- @bramkoningsecom haalt drie keer boven 28x met een getal of bedrag: "Er is veel veranderd in 10 jaar tijd" 237.800 views (36,2x), Lamborghini "van €700K" 215.900 (32,8x), "Wat kost het om ... vol te tanken? Kunnen jullie het bedrag raden?" 189.400 (28,8x).
-- **Te leren:** Een concreet bedrag in de caption, gecombineerd met een vraag aan de kijker om te raden, werkt in de niche ver boven de mediaan.
+- jeeigenwebshop: video over Leo die wegloopt bij een verkooppraatje, 44.100 views, 83,1x de mediaan van het account.
+- bramkoningsecom: "Er is veel veranderd in 10 jaar tijd" 258.400 views (47,0x) en "wat kost voltanken, kunnen jullie het bedrag raden?" 241.000 views (43,8x).
+- **Te leren:** De grootste uitschieters openen met een getal of bedrag (10 jaar, €700K, €250K) of een vraag die kijkers laat raden in de reacties.
