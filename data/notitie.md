@@ -1,16 +1,16 @@
 ## Dennis
-- "Hard to work" (46,6 dagen oud, 7 seconden) kreeg weer de meeste groei: +9.400 views, +153 shares, +48 saves en +3 reacties in 24 uur. Hij staat nu op 178.500 views, 296,5x de mediaan van 602. Geen andere video kreeg meer dan +37 views.
-- "#fy #bali" (19 seconden) haalde op de eerste dag 4.091 views en staat na 2,6 dagen op 4.173 (6,9x de mediaan). De vier korte video's van 10 tot 19 seconden staan op 6,9x tot 7,9x; de uitlegvideo's van 38 tot 100 seconden uit dezelfde periode blijven op 0,6x tot 0,7x.
-- Views erbij vandaag 9.503 tegen 14.744 gisteren; de laatste 7 dagen 81.631 tegen 37.361 de 7 dagen daarvoor.
-- **Tip:** Maak een deel 2 van "Hard to work" in hetzelfde format van 7 seconden met het Claude-thema, nu hij op dag 46 nog 9.400 views en 153 shares per dag krijgt, en verwijs ernaar in een vastgepinde reactie onder het origineel.
+- "Hard to work" (47,6 dagen oud, 7 seconden) kreeg opnieuw de meeste groei: +3.500 views, +63 shares en +16 saves in 24 uur (reacties -2). Hij staat op 182.000 views, 294,0x de mediaan van 619.
+- "#fy #bali" (19 seconden) haalde op de eerste dag 4.091 views en staat na 3,6 dagen op 4.194 (6,8x de mediaan), maar kreeg de laatste 24 uur nog maar +21 views. Geen andere video kreeg meer dan +7 views.
+- Views erbij vandaag 3.554 tegen 9.503 gisteren; de laatste 7 dagen 84.313 tegen 33.157 de 7 dagen daarvoor.
+- **Tip:** Zet één punt uit de Meta ads-uitlegvideo's (0,6x de mediaan, tot 1,84% saves) in het korte format van 10 tot 19 seconden dat vier keer op 6,8x tot 7,7x kwam, en zet de uitleg in een vastgepinde reactie, want de korte video's halen nu maar 0,05% tot 0,38% saves.
 
 ## Kaya
-- Nieuwe video "Insta zag t eerder" (18 seconden) haalde op de eerste dag 671 views, 0,2x de mediaan van 2.699,5, en staat na 1,5 dag op 795 views (+241, +3 reacties).
-- "Kaya out" (60 seconden) kreeg de meeste views erbij: +836, met +10 shares en +2 reacties, en staat op 1.948 views (0,7x). "klein beetje generfd door de zon" kreeg +152 en staat op 3.323 views (1,2x).
-- Views erbij vandaag 861 tegen 1.474 gisteren; de laatste 7 dagen 11.579 tegen 11.012 de 7 dagen daarvoor.
-- **Tip:** Maak een vervolg op "Product research": drie van haar vier uitlegvideo's van 2 minuten of langer zitten boven de mediaan (Part 2 5.757, Google ads Pt1 3.525, Product research 3.290 views, met 2,5% tot 3,0% saves), terwijl de korte "Insta zag t eerder" op 0,2x blijft.
+- "Kaya out" (60 seconden, 5,6 dagen oud) kreeg de meeste views erbij: +836, met +22 likes, +2 reacties en +1 save. Hij staat op 1.948 views (0,7x de mediaan van 2.710,5).
+- Nieuwe video "Insta zag t eerder" (18 seconden) haalde op de eerste dag 671 views, 0,2x de mediaan, en staat na 2,5 dagen op 943 views (0,3x) met 8 reacties. "klein beetje generfd door de zon op slide 1" kreeg +146 en staat op 3.469 views (1,3x).
+- Views erbij vandaag 712 tegen 861 gisteren; de laatste 7 dagen 11.182 tegen 11.218 de 7 dagen daarvoor.
+- **Tip:** Maak weer een video die in de caption naar één slide verwijst: "klein beetje generfd door de zon op slide 1" (3.469 views, 1,3x, 11 reacties) en "slide 5" (3.237 views, 1,2x, 27 reacties) kwamen allebei boven de mediaan.
 
 ## Niche
-- thomasvdleck: "Je weet precies wat je fout doet", 240.700 views, 56,9x de mediaan van het account.
-- bramkoningsecom: de video over het voltanken van een Lamborghini met "Kunnen jullie het bedrag raden?", 308.700 views (53,9x), en "Er is veel veranderd in 10 jaar tijd", 303.100 views (53,0x).
-- **Te leren:** De sterkste captions spreken de kijker direct aan ("je weet precies") of stellen een vraag over een bedrag die uitnodigt tot raden in de reacties.
+- bramkoningsecom: "Wat kost het om een Lamborghini Aventador SVJ volledig vol te tanken... Kunnen jullie het bedrag raden?", 332.200 views, 60,4x de mediaan van het account.
+- thomasvdleck: "Je weet precies wat je fout doet", 243.000 views, 65,1x de mediaan van het account.
+- **Te leren:** Een vraag over een bedrag die de kijker laat raden in de reacties, en een korte zin die de kijker direct aanspreekt met "je", halen allebei meer dan 60x de eigen mediaan.
