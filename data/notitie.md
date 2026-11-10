@@ -1,16 +1,16 @@
 ## Dennis
-- "Hard to work" (47,6 dagen oud, 7 seconden) kreeg opnieuw de meeste groei: +3.500 views, +63 shares en +16 saves in 24 uur (reacties -2). Hij staat op 182.000 views, 294,0x de mediaan van 619.
-- "#fy #bali" (19 seconden) haalde op de eerste dag 4.091 views en staat na 3,6 dagen op 4.194 (6,8x de mediaan), maar kreeg de laatste 24 uur nog maar +21 views. Geen andere video kreeg meer dan +7 views.
-- Views erbij vandaag 3.554 tegen 9.503 gisteren; de laatste 7 dagen 84.313 tegen 33.157 de 7 dagen daarvoor.
-- **Tip:** Zet één punt uit de Meta ads-uitlegvideo's (0,6x de mediaan, tot 1,84% saves) in het korte format van 10 tot 19 seconden dat vier keer op 6,8x tot 7,7x kwam, en zet de uitleg in een vastgepinde reactie, want de korte video's halen nu maar 0,05% tot 0,38% saves.
+- "Hard to work" (48,6 dagen oud, 7 seconden) groeit weer het hardst: +4.600 views, +83 shares en +36 saves in 24 uur, maar 0 reacties erbij. Hij staat op 186.600 views, 301,0x de mediaan van 620.
+- Geen nieuwe video vandaag. "#fy #bali" (4,6 dagen oud) staat op 4.222 views (6,8x de mediaan) en kreeg nog +28 views; geen andere video kreeg meer dan +7.
+- Views erbij vandaag 4.674 tegen 3.554 gisteren; de laatste 7 dagen 86.024 tegen 25.823 de 7 dagen daarvoor.
+- **Tip:** Zet onder "Hard to work" een vastgepinde reactie met een vraag aan de kijker, want hij krijgt nog 4.600 views per dag maar geen enkele nieuwe reactie.
 
 ## Kaya
-- "Kaya out" (60 seconden, 5,6 dagen oud) kreeg de meeste views erbij: +836, met +22 likes, +2 reacties en +1 save. Hij staat op 1.948 views (0,7x de mediaan van 2.710,5).
-- Nieuwe video "Insta zag t eerder" (18 seconden) haalde op de eerste dag 671 views, 0,2x de mediaan, en staat na 2,5 dagen op 943 views (0,3x) met 8 reacties. "klein beetje generfd door de zon op slide 1" kreeg +146 en staat op 3.469 views (1,3x).
-- Views erbij vandaag 712 tegen 861 gisteren; de laatste 7 dagen 11.182 tegen 11.218 de 7 dagen daarvoor.
-- **Tip:** Maak weer een video die in de caption naar één slide verwijst: "klein beetje generfd door de zon op slide 1" (3.469 views, 1,3x, 11 reacties) en "slide 5" (3.237 views, 1,2x, 27 reacties) kwamen allebei boven de mediaan.
+- "Kaya out" (60 seconden, 6,6 dagen oud) kreeg de meeste views erbij: +836, met +22 likes, +10 shares en +2 reacties. Hij staat op 1.948 views (0,7x de mediaan van 2.722).
+- "Insta zag t eerder" (3,5 dagen oud) kreeg +126 en staat op 1.069 views (0,4x); "klein beetje generfd door de zon op slide 1" kreeg +114 en staat op 3.583 views (1,3x).
+- Views erbij vandaag 899 tegen 712 gisteren; de laatste 7 dagen 11.028 tegen 11.259 de 7 dagen daarvoor.
+- **Tip:** Maak een deel 2 van "Kaya out", de enige recente video die nog honderden views per dag erbij krijgt (+836, tegen hooguit +126 voor de rest).
 
 ## Niche
-- bramkoningsecom: "Wat kost het om een Lamborghini Aventador SVJ volledig vol te tanken... Kunnen jullie het bedrag raden?", 332.200 views, 60,4x de mediaan van het account.
-- thomasvdleck: "Je weet precies wat je fout doet", 243.000 views, 65,1x de mediaan van het account.
-- **Te leren:** Een vraag over een bedrag die de kijker laat raden in de reacties, en een korte zin die de kijker direct aanspreekt met "je", halen allebei meer dan 60x de eigen mediaan.
+- bramkoningsecom: "Wat kost het om een Lamborghini Aventador SVJ volledig vol te tanken... Kunnen jullie het bedrag raden?" haalde 343.900 views (58,5x de eigen mediaan), "Er is veel veranderd in 10 jaar tijd" 324.400 views (55,2x).
+- thomasvdleck: "Dit zegt genoeg over iemand" haalde 95.300 views (28,9x) en "Nu ga je dit overal herkennen" 84.500 views (25,6x).
+- **Te leren:** De grootste uitschieters openen met een bedrag of tijdsspanne die de kijker laat raden of vergelijken (tanken van een Lamborghini, 10 jaar verschil), of met een korte zin die nieuwsgierig maakt zonder het antwoord te geven.
