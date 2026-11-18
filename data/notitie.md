@@ -1,16 +1,16 @@
 ## Dennis
-- "Hard to work" (55,6 dagen oud) groeit weer het hardst: 2.500 views, 300 likes, 50 shares, 12 saves en 1 reactie erbij, nu 213.500 views (335,7x de mediaan van 636).
-- De Jensen Huang-video (2,6 dagen oud) is stilgevallen: 100 views en 0 saves erbij, nu 18.900 views (29,7x de mediaan). De andere video's kregen 12 views of minder erbij.
-- Views erbij vandaag 2.648 tegen 10.968 gisteren. De laatste 7 dagen 46.811 tegen 86.024 de 7 dagen ervoor.
-- **Tip:** Post weer een korte clip van 7 tot 19 sec: 5 van de 6 clips van die lengte uit de laatste 26 dagen haalden 6,7x tot 29,7x de mediaan (Jensen Huang, bro, Bali, lockedin, zonder caption), terwijl de uitleg-video's van 38 tot 100 sec in die periode op 0,6x tot 0,7x bleven.
+- "Hard to work" (56,6 dagen oud) groeit weer het hardst: 3.100 views, 400 likes, 55 shares, 26 saves en 1 reactie erbij, nu 216.600 views (339,5x de mediaan van 638).
+- De Jensen Huang-video (3,6 dagen oud) kreeg 100 views en 0 saves erbij, nu 19.000 views (29,8x de mediaan). De andere video's kregen 5 views of minder erbij; er is geen nieuwe video.
+- Views erbij vandaag 3.226 tegen 2.648 gisteren. De laatste 7 dagen 43.161 tegen 82.538 de 7 dagen ervoor.
+- **Tip:** Zet een vastgepinde reactie onder "Hard to work" die naar je nieuwste video verwijst: hij haalt nog 3.100 views en 55 shares per dag, maar leverde maar 1 reactie op, dus dat verkeer gaat nu nergens heen.
 
 ## Kaya
-- "Ben nog niet eens op 1%" (20 sec, 2,4 dagen oud) kreeg 222 views en 0 nieuwe reacties erbij, nu 1.522 views en 26 reacties, 0,5x de mediaan van 2.777.
-- "Kaya out" staat weer bovenaan met 836 views erbij, maar dat cijfer is oud: de video zit sinds 5 november niet meer in de opgehaalde gegevens. Daarna kregen "Zijn we al wakker?" (173,6 dagen oud) 100 views en "klein beetje generfd door de zon op slide 1" 69 views erbij.
-- Views erbij vandaag 787 tegen 1.007 gisteren. De laatste 7 dagen 3.732 tegen 11.028 de 7 dagen ervoor.
-- **Tip:** Maak weer een uitleg-video van 2 minuten of langer: 3 van haar 4 video's van 120 sec of meer zitten boven de mediaan ("Part 2 goons" 2,1x, "Product research" 1,4x met 2,52% saves, "Google ads Pt1" 1,3x), terwijl de enige nieuwe video van deze week (20 sec) op 0,5x staat.
+- Nieuwe video "NL zomer, en Asia de andere 9 maanden" (60 sec, 0,5 dag oud) staat op 989 views en 6 reacties, 0,4x de mediaan van 2.782.
+- "Ben nog niet eens op 1%" kreeg de meeste echte groei: 162 views en 1 reactie erbij, nu 1.684 views (0,6x). "Product research" kreeg de meeste saves erbij (3). De 836 views bij "Kaya out" tellen niet: die video zit sinds 5 november niet meer in de opgehaalde gegevens.
+- Views erbij vandaag 1.881 tegen 787 gisteren. De laatste 7 dagen 7.047 tegen 7.069 de 7 dagen ervoor, dus gelijk.
+- **Tip:** Maak een deel 2 van "Product research" (125 sec): die staat op 1,4x de mediaan met 2,55% saves en kreeg vandaag nog saves erbij, terwijl haar drie nieuwste video's (18 tot 60 sec) op 0,4x tot 0,6x blijven.
 
 ## Niche
-- bramkoningsecom: "Wat kost het om een Lamborghini Aventador SVJ volledig vol te tanken" staat op 398.300 views (87,1x de mediaan), "Dit is hoe mijn maandagochtend er 6 jaar geleden uitzag" op 174.200 (38,1x).
-- thomasvdleck: "Hoeveel van deze 3 herken jij?" groeide van 23.800 naar 64.300 views, 24,5x de mediaan.
-- **Te leren:** De twee sterkste captions combineren een getal met een directe vraag aan de kijker ("Kunnen jullie het bedrag raden?", "Hoeveel van deze 3 herken jij?").
+- bramkoningsecom: "Dit is hoe mijn maandagochtend er 6 jaar geleden uitzag" staat op 182.600 views (39,4x de mediaan).
+- thomasvdleck: "Hoeveel van deze 3 herken jij?" staat op 79.600 views (29,7x de mediaan); ook "4 redenen waarom klanten afhaken" haalde 4,8x.
+- **Te leren:** De sterkste captions openen met een getal: een tijdsprong ("6 jaar geleden", "7 jaar geleden") of een telbare lijst ("deze 3", "4 redenen").
