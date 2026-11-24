@@ -1,16 +1,15 @@
 ## Dennis
-- Nieuw: "#bali #entrepreneur #ecommerce #lockedin" (18 sec) haalde op de eerste dag 599 views, 0,9x de mediaan van 662. Hij staat nu op 755 views (1,1x), met 503 views, 2 saves en 1 reactie erbij in 24 uur.
-- "#jensenhuang #fyp #nvidia" kreeg 100 views erbij en staat op 19.200 (29,0x). De 3.100 views erbij bij "Hard to work" tellen niet mee: die video zit sinds 18 november niet meer in de opgehaalde gegevens.
-- Views erbij vandaag 738 tegen 286 gisteren. De 7 dagen tegen de 7 dagen ervoor vergelijken kan niet door de meetdip van -216.470 op 19 november.
-- **Tip:** Maak een vervolg op het onderwerp van de Jensen Huang-video (17 sec, 29,0x, 15,32% likes, 12.688 views op de eerste dag). De nieuwe Bali-clip heeft dezelfde lengte maar alleen lifestyle-hashtags en bleef op dag 1 op 0,9x, dus het onderwerp maakte het verschil, niet de lengte.
+- Geen nieuwe video. "#bali #entrepreneur #ecommerce #lockedin" (18 sec) kreeg 34 views en 5 likes erbij, 0 saves en 0 reacties, en staat nu op 789 views (1,2x de mediaan van 663,5). De 3.100 views erbij bij "Hard to work" tellen niet mee: die video zit sinds 18 november niet meer in de opgehaalde gegevens.
+- Views erbij vandaag 44 tegen 738 gisteren. De 7 dagen tegen de 7 dagen ervoor vergelijken kan niet door de meetdip van -216.470 op 19 november.
+- **Tip:** Maak een tweede korte clip over een bekend tech-onderwerp zoals de Jensen Huang-video (17 sec, 19.200 views, 28,9x, 15,32% likes). De Bali-clip van dezelfde lengte met alleen lifestyle-hashtags staat na 2 dagen op 1,2x en groeide vandaag met 34 views, dus het onderwerp maakte het verschil, niet de lengte.
 
 ## Kaya
-- Geen nieuwe video. "Bro kijkt teveel Greg Lav" kreeg de meeste views erbij: 160, plus 3 saves en 1 reactie (nu 965, 0,4x de mediaan van 2.656). "generational run" kreeg 77 views, 3 saves en 2 shares erbij (nu 3.524, 1,3x).
-- De 836 views erbij bij "Kaya out" tellen niet mee: die video zit sinds 5 november niet meer in de opgehaalde gegevens.
-- Views erbij vandaag 763 tegen 775 gisteren. De laatste 7 dagen 7.062 tegen 3.844 de 7 dagen ervoor, maar die vorige periode bevat een meetdip van -1.434 op 11 november.
-- **Tip:** Maak weer een uitlegvideo van 2 minuten of langer. "Part 2 goons" (121 sec, 2,3x), "Product research" (125 sec, 1,6x) en "Google ads Pt1" (154 sec, 1,4x) haalden 2,52% tot 3,08% saves, terwijl je twee nieuwste video's op 0,7x en 0,4x staan.
+- Nieuw: "KLM business is stiekem best ass" (12 sec) staat na ongeveer 10 uur op 1.231 views (0,5x de mediaan van 2.663) en heeft al 19 reacties.
+- "Bro kijkt teveel Greg Lav" kreeg 148 views en 4 likes erbij, 0 reacties (nu 1.113, 0,4x). De 836 views erbij bij "Kaya out" tellen niet mee: die video zit sinds 5 november niet meer in de opgehaalde gegevens.
+- Views erbij vandaag 2.194 tegen 763 gisteren. De laatste 7 dagen 8.469 tegen 3.732 de 7 dagen ervoor, maar die vorige periode bevat een meetdip van -1.434 op 11 november.
+- **Tip:** Zet bij de KLM-video een vastgezette reactie met een vraag aan de kijker: de 19 reacties in 10 uur zijn evenveel als "🤓" (3.261 views, 1,2x) in totaal haalde, terwijl de views nog op 0,5x staan.
 
 ## Niche
-- bramkoningsecom: "Dit is hoe mijn maandagochtend er 6 jaar geleden uitzag" staat op 191.800 views (46,0x de mediaan).
-- thomasvdleck: "Hoeveel van deze 3 herken jij?" staat op 106.000 views (38,2x de mediaan); ook "4 redenen waarom klanten afhaken." haalde 5,0x en "7 jaar geleden had ik dit nooit verwacht." 4,0x.
-- **Te leren:** De grootste uitschieters openen opnieuw met een getal: een tijdsprong ("6 jaar geleden", "7 jaar geleden") of een telbare lijst ("Hoeveel van deze 3", "4 redenen").
+- thomasvdleck: "Hoeveel van deze 3 herken jij?" staat op 110.400 views (40,4x de mediaan); "4 redenen waarom klanten afhaken." haalde 5,2x.
+- bramkoningsecom: de video over GTA 6 staat op 43.400 views (10,1x) en eindigt met "Ik ben heel benieuwd hoe jullie hierover denken."
+- **Te leren:** De grootste uitschieters stellen de kijker een directe vraag, met een getal ("Hoeveel van deze 3") of over nieuws (GTA 6).
